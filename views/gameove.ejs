@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پایان بازی</title>
+    <style>
+      body {
+        background-color: #fefefe;
+        font-family: 'Tahoma', sans-serif;
+        text-align: center;
+        padding: 50px;
+        direction: rtl;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #d9534f;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      .score {
+        margin: 20px 0;
+        font-size: 20px;
+        color: #555;
+      }
+
+      button {
+        padding: 12px 25px;
+        font-size: 16px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #4cae4c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>بازی به پایان رسید!</h1>
+      <h2>امتیاز شما زیر صفر رسید.</h2>
+      <div class="score">امتیاز نهایی شما: <strong><%= userScore %></strong></div>
+      <form action="/reset" method="post">
+        <button type="submit">دوباره امتحان کنید</button>
+      </form>
+    </div>
+  </body>
+</html>
